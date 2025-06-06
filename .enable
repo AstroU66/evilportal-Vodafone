@@ -1,1 +1,2 @@
-# Inhalt von .enable: (leer)
+#!/bin/bash
+exit 0
