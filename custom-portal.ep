@@ -1,16 +1,23 @@
-# custom-portal.ep
-
-# 1) Erlaube ping.js, damit iOS/Android-Captive-Checks nicht blockiert werden
 URL_ACL:
     target = /ping.js
     action = allow
+URL_ACL:
+    target = /style.css
+    action = allow
+URL_ACL:
+    target = /tabs.js
+    action = allow
+URL_ACL:
+    target = /assets/
+    action = allow
+URL_ACL:
+    target = /index.php
+    action = allow
 
-# 2) Fange alle anderen HTTP-Requests ab und leite den Client auf index.php?url=<Original-URL>
 URL_ACL:
     target = *
     action = redirect
     location = http://172.16.42.1/index.php?url=
 
-# 3) Nach „Erfolg“ → leite zurück ins echte Netz (hier Beispiel: google.com)
 SUCCESS_URL:
     location = http://www.google.com/

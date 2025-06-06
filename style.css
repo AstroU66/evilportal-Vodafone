@@ -1,6 +1,3 @@
-/* ============================================================
-   GLOBAL RESET & BODY STYLING
-   ============================================================ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,15 +13,13 @@ body {
     align-items: center;
     min-height: 100vh;
     padding-top: 40px;
-    padding-bottom: 40px; /* Platz für Footer oder Abstand */
+    padding-bottom: 40px; 
 }
 
-/* ============================================================
-   CONTAINER & HEADER
-   ============================================================ */
+
 .container {
     width: 100%;
-    max-width: 500px;       /* Maximale Breite des Kasten */
+    max-width: 500px;       
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -39,7 +34,7 @@ body {
 }
 
 .header img {
-    max-width: 120px; /* Logo max. 120px breit */
+    max-width: 120px; 
     height: auto;
     margin-bottom: 12px;
 }
@@ -47,7 +42,7 @@ body {
 .header h1 {
     font-size: 24px;
     margin-bottom: 4px;
-    color: #e60000; /* Vodafone-Rot */
+    color: #e60000; 
 }
 
 .header p {
@@ -55,9 +50,7 @@ body {
     color: #555;
 }
 
-/* ============================================================
-   ACCORDION BUTTON STYLING
-   ============================================================ */
+
 .accordion {
     background-color: #f1f1f1;
     color: #333;
@@ -80,7 +73,7 @@ body {
     background-color: #eaeaea;
 }
 
-/* Kleiner Pfeil-Down (Unicode) */
+
 .accordion:after {
     content: '\25BE';
     font-size: 12px;
@@ -92,9 +85,7 @@ body {
     transform: rotate(180deg);
 }
 
-/* ============================================================
-   PANEL (COLLAPSIBLE CONTENT)
-   ============================================================ */
+
 .panel {
     max-height: 0;
     overflow: hidden;
@@ -109,9 +100,7 @@ body {
     padding-bottom: 20px;
 }
 
-/* ============================================================
-   FORM STYLING (ALLE FORMULARE)
-   ============================================================ */
+
 .panel form {
     display: flex;
     flex-direction: column;
@@ -140,7 +129,7 @@ body {
 }
 
 .panel input:focus {
-    border-color: #e60000; /* Vodafone-roter Fokus */
+    border-color: #e60000; 
     box-shadow: 0 0 0 2px rgba(230, 0, 0, 0.1);
 }
 
@@ -173,9 +162,7 @@ body {
     background-color: #cc0000;
 }
 
-/* ============================================================
-   GENERISCHES FEHLER-BANNER (NACH SUBMISSION)
-   ============================================================ */
+
 .submit-error {
     background-color: #ffe5e5;
     border: 1px solid #f5c2c2;
@@ -192,9 +179,7 @@ body {
     display: block;
 }
 
-/* ============================================================
-   RESPONSIVE ANGEPASST FÜR KLEINE BILDSCHIRME
-   ============================================================ */
+
 @media (max-width: 480px) {
     .header h1 {
         font-size: 20px;
@@ -210,22 +195,20 @@ body {
         font-size: 15px;
     }
 }
-/* ============================================================
-   PASSWORT-FELD MIT TOGGLE‐AUGE
-   ============================================================ */
+
 .password-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Das Passwort-Input selbst */
+
 .password-wrapper input[type="password"] {
     width: 100%;
-    padding-right: 40px; /* Platz für das Auge */
+    padding-right: 40px; 
 }
 
-/* Das Auge-Button‐Icon: */
+
 .password-wrapper .toggle-password {
     position: absolute;
     right: 10px;
@@ -238,18 +221,16 @@ body {
     color: #777;
 }
 
-/* Hover‐Effekt fürs Auge */
+
 .password-wrapper .toggle-password:hover {
     color: #333;
 }
 
-/* ============================================================
-   PASSWORD CRITERIA LISTE
-   ============================================================ */
+
 .password-criteria {
     list-style: none;
     margin: 12px 0 0 0;
-    padding: 0 20px; /* bisschen Einrücken unter dem Input */
+    padding: 0 20px; 
 }
 
 .password-criteria li {
@@ -260,50 +241,42 @@ body {
     align-items: center;
 }
 
-/* Das Check-Icon links: */
+
 .password-criteria .check-icon {
     display: inline-block;
-    width: 20px;    /* Gleichmäßiger Abstand,
-                      damit Text immer an gleicher Stelle beginnt */
+    width: 20px;    
     font-size: 16px;
     margin-right: 6px;
-    color: #b30c0c;    /* Rot (❌) standardmäßig */
+    color: #b30c0c;    
 }
 
-/* Wenn ein Kriterium erfüllt ist, wechseln wir in Grün (✅) */
+
 .password-criteria li.valid .check-icon {
-    color: #0a0;    /* Dunkelgrüner Haken */
+    color: #0a0;    
 }
 
-/* Optional: Wenn valid, kann man auch den Text selbst leicht grün färben */
+
 .password-criteria li.valid {
     color: #0a0;
 }
 
-/* ============================================================
-   ANPASSUNGEN FÜR DAS PASSWORT‐FEHLERFELD (EXISTIEREND)
-   ============================================================ */
-/* Stelle sicher, dass .error-msg unter dem neuen Criteria‐Block steht */
+
+
 #error-margin-fix {
-    margin-top: 0; /* falls notwendig */
+    margin-top: 0; 
 }
 
-/* ============================================================
-   MEDIA-QUERY-SNIPPET (sofern du bereits eins hast)
-   ============================================================ */
+
 @media (max-width: 480px) {
-    /* Bereits vorhandene Styles bleiben erhalten. Optional
-       kannst du die .password-criteria-Liste etwas schmaler machen: */
+    
     .password-criteria {
         padding: 0 10px;
         font-size: 12px;
     }
 }
 
-/* ===================================
-   UPDATED: STYLE FÜR DAS SVG-AUGE
-   =================================== */
-/* Der Button umschließt nun die beiden SVG‐Icons */
+
+
 .password-wrapper .toggle-password {
     position: absolute;
     right: 10px;
@@ -317,22 +290,22 @@ body {
     outline: none;
 }
 
-/* Wenn man mit der Maus über das Auge fährt, wird es dunkler */
+
 .password-wrapper .toggle-password:hover .icon-eye,
 .password-wrapper .toggle-password:hover .icon-eye-slash {
-    fill: #333; /* Dunkleres Grau beim Hover */
+    fill: #333; 
 }
 
-/* SVG-Grafiken (Grundzustand in Grau #777) */
+
 .password-wrapper .toggle-password .icon-eye,
 .password-wrapper .toggle-password .icon-eye-slash {
     width: 20px;
     height: 20px;
-    fill: #777;       /* Sleekes Grau */
+    fill: #777;       
     transition: fill 0.15s ease;
 }
 
-/* Wenn das Passwort sichtbar ist, wird das durchgestrichene Auge angezeigt */
+
 .password-wrapper .toggle-password.showing-password .icon-eye {
     display: none;
 }
@@ -340,10 +313,10 @@ body {
     display: block;
 }
 
-/* NEU: Kriterium – nur Sonderzeichen . _ - ? ! % erlaubt */
+
 #criteria-allowed-chars.valid .check-icon {
-    color: #0a0; /* grüner Haken (✅) */
+    color: #0a0; 
 }
 #criteria-allowed-chars.valid {
-    color: #0a0; /* optional auch den Text grün färben */
+    color: #0a0; 
 }
