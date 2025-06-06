@@ -14,7 +14,7 @@ function log_credentials(string $type, string $user, string $pass) {
 }
 
 /**
- * Setzt ein Cookie, damit index.html erkennt, dass bereits „authentifiziert“ wurde,
+ * Setzt ein Cookie, damit index.php erkennt, dass bereits „authentifiziert“ wurde,
  * und leitet entweder zur Original-URL (aus ?url=) oder zum Fallback (Google) weiter.
  *
  * @param string|null $url  URL aus ?url=<...>

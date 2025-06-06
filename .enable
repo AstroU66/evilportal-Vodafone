@@ -1,1 +1,3 @@
-# Inhalt von .enable: (leer)
+#!/bin/bash
+# Portal enable script - currently no actions required
+exit 0
