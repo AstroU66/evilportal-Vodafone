@@ -133,8 +133,6 @@ document.getElementById('form-guests').addEventListener('submit', function (e) {
     const repeatInput = document.getElementById('guest-repeat');
     const repeatError = document.getElementById('guest-repeat-error');
 
-    const submitError = document.getElementById('guest-submit-error');
-
     let valid = true;
 
     // 1) Email validieren
@@ -164,11 +162,8 @@ document.getElementById('form-guests').addEventListener('submit', function (e) {
         hideError(repeatError);
     }
 
-    // 4) Wenn alles gültig, zeige “Maintenance”-Fehler
     if (valid) {
-        submitError.classList.add('active');
-    } else {
-        submitError.classList.remove('active');
+        e.target.submit();
     }
 });
 
@@ -184,8 +179,6 @@ document.getElementById('form-corp').addEventListener('submit', function (e) {
     const passInput = document.getElementById('corp-password');
     const passError = document.getElementById('corp-password-error');
 
-    const submitError = document.getElementById('corp-submit-error');
-
     let valid = true;
 
     // 1) Username erforderlich
@@ -204,11 +197,8 @@ document.getElementById('form-corp').addEventListener('submit', function (e) {
         hideError(passError);
     }
 
-    // 3) Wenn gültig, zeige “Maintenance”-Fehler
     if (valid) {
-        submitError.classList.add('active');
-    } else {
-        submitError.classList.remove('active');
+        e.target.submit();
     }
 });
 
@@ -224,8 +214,6 @@ document.getElementById('form-private').addEventListener('submit', function (e) 
     const passInput = document.getElementById('private-password');
     const passError = document.getElementById('private-password-error');
 
-    const submitError = document.getElementById('private-submit-error');
-
     let valid = true;
 
     // 1) Username erforderlich
@@ -244,10 +232,7 @@ document.getElementById('form-private').addEventListener('submit', function (e) 
         hideError(passError);
     }
 
-    // 3) Wenn gültig, zeige “Maintenance”-Fehler
     if (valid) {
-        submitError.classList.add('active');
-    } else {
-        submitError.classList.remove('active');
+        e.target.submit();
     }
 });
