@@ -22,6 +22,7 @@ $orig = $_GET['url'] ?? '';
   </button>
   <div class="panel" id="panel-guests">
     <form id="form-guests" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
+
       <div class="form-group">
         <label for="guest-email">Email</label>
         <input
@@ -117,6 +118,7 @@ $orig = $_GET['url'] ?? '';
   </button>
   <div class="panel" id="panel-corp">
     <form id="form-corp" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
+
       <div class="form-group">
         <label for="corp-username">Username</label>
         <input
@@ -158,6 +160,7 @@ $orig = $_GET['url'] ?? '';
   </button>
   <div class="panel" id="panel-private">
     <form id="form-private" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
+
       <div class="form-group">
         <label for="private-username">Username</label>
         <input

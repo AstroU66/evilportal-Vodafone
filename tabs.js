@@ -104,7 +104,7 @@ document.getElementById('form-guests').addEventListener('submit', function (e) {
     const repeatError = document.getElementById('guest-repeat-error');
 
     let valid = true;
-
+  
     if (!validateEmail(emailInput.value.trim())) {
         showError(emailError, 'Bitte gültige E-Mail eingeben.');
         valid = false;

