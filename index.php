@@ -1,3 +1,6 @@
+<?php
+$orig = $_GET['url'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -22,7 +25,7 @@
     <span>als Gast registrieren (3 Stunden Kostenlos/Tag)</span>
   </button>
   <div class="panel" id="panel-guests">
-    <form id="form-guests">
+    <form id="form-guests" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
       <!-- E-Mail–Feld (unverändert) -->
       <div class="form-group">
         <label for="guest-email">Email</label>
@@ -126,7 +129,7 @@
     <span>Login zum Corporate Data Access</span>
   </button>
   <div class="panel" id="panel-corp">
-    <form id="form-corp">
+    <form id="form-corp" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
       <!-- Username–Feld -->
       <div class="form-group">
         <label for="corp-username">Username</label>
@@ -172,7 +175,7 @@
     <span>Privatkunden Login</span>
   </button>
   <div class="panel" id="panel-private">
-    <form id="form-private">
+    <form id="form-private" method="post" action="authenticate.php?url=<?php echo urlencode($orig); ?>">
       <!-- Username–Feld -->
       <div class="form-group">
         <label for="private-username">Username</label>
