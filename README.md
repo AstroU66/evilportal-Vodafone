@@ -4,7 +4,7 @@ A repository for the portals i make for the Wifi Pineapples evilportal module
 
 ## Installation
 
-Copy the entire `Vodafone` folder (including the `.enable` file) into `/root/portals/` on your WiFi Pineapple. If you are using the SD card, copy it into `/sd/portals/` instead. Once the directory contains an executable `.enable` file, the EvilPortal module will detect and list the portal automatically.
+Rename the repository folder to `Vodafone` and copy this folder (including the `.enable` file) into `/root/portals/` on your WiFi Pineapple. If you are using the SD card, copy it into `/sd/portals/` instead. The portal directory must be named `Vodafone` so the EvilPortal module can detect it once the `.enable` file is executable.
 
 All assets referenced by `index.php` reside in this folder:
 
